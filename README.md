@@ -1,6 +1,6 @@
 # FounderSmash
 
-![FounderSmash](public/og.jpg)
+![FounderSmash](foundersmash-github.jpg)
 
 FounderSmash is a voting application that allows users to vote on whether they would `pass` or `smash` on Silicon Valley's top founders.
 
