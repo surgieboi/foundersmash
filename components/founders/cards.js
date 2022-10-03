@@ -140,10 +140,10 @@ export default function VotingCards() {
                   mx-auto py-5
                   flex flex-col justify-center content-between items-center">
                      {/* data.filter(x => x.founder_id === fid) */}
-                <div className="w-full h-[450px] sm:h-[455px]">
+                <div className="w-full sm:max-w-[400px] h-[450px] sm:h-[455px]">
                     {data.filter(x => x.founder_id === fid).map(founder =>
-                        <div className="relative w-full" key={founder.founder_id}>
-                            <div className="absolute w-full h-[400px] sm:h-[375px]"> 
+                        <div className="relative w-full sm:max-w-[400px]" key={founder.founder_id}>
+                            <div className="absolute w-full sm:max-w-[400px] h-[400px] sm:h-[375px]"> 
                                 <div className="relative bg-white rounded-3xl">
                                     <div className="h-[350px] sm:h-[375px] rounded-t-3xl"
                                         style={
@@ -168,7 +168,7 @@ export default function VotingCards() {
                     )}
 
                 </div>
-                <div className="flex w-full sm:mt-3">
+                <div className="flex w-full sm:max-w-[400px] sm:mt-3">
                     <button onClick={() => { votePass(); updateClicks(); updateVotingStatus(); }}
                         className="m-1 py-4 px-10 
                                 w-1/2
