@@ -128,11 +128,11 @@ export default function VotingCards() {
         localStorage.clear();
     }
 
-    if (isLoading) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px]  mx-auto py-20 px-10 text-2xl text-center">Loading Founders...</p>;
+    if (isLoading) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Loading Founders...</p>;
 
-    if (!data) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px]  mx-auto py-20 px-10 text-2xl text-center">Whoops! There was an issue loading data from Supabase.</p>;
+    if (!data) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Whoops! There was an issue loading data from Supabase.</p>;
 
-    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px]  mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 see how your passes and smashes <Link href="/rankings" passHref><a onClick={() => { clearStorage(); }} className="underline">rank up</a></Link>!</p>;
+    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 see how your passes and smashes <Link href="/rankings" passHref><a onClick={() => { clearStorage(); }} className="underline">rank up</a></Link>!</p>;
 
     return (
         <>
@@ -140,10 +140,10 @@ export default function VotingCards() {
                   mx-auto py-5
                   flex flex-col justify-center content-between items-center">
                      {/* data.filter(x => x.founder_id === fid) */}
-                <div className="w-full sm:w-[300px] h-[450px] sm:h-[455px]">
+                <div className="w-full h-[450px] sm:h-[455px]">
                     {data.filter(x => x.founder_id === fid).map(founder =>
                         <div className="relative w-full" key={founder.founder_id}>
-                            <div className="absolute w-full sm:w-[300px] h-[400px] sm:h-[375px]"> 
+                            <div className="absolute w-full h-[400px] sm:h-[375px]"> 
                                 <div className="relative bg-white rounded-3xl">
                                     <div className="h-[350px] sm:h-[375px] rounded-t-3xl"
                                         style={
