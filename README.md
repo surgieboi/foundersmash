@@ -4,7 +4,7 @@
 
 FounderSmash is a voting application that allows users to vote on whether they would `pass` or `smash` on Silicon Valley's top founders.
 
-What does it mean to `pass` or `smash`? Find out on (Urban Dictionary)[https://www.urbandictionary.com/define.php?term=Smash%20or%20pass].
+What does it mean to `pass` or `smash`? Find out on [Urban Dictionary](https://www.urbandictionary.com/define.php?term=Smash%20or%20pass).
 
 ## Getting Started
 
