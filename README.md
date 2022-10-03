@@ -6,6 +6,10 @@ FounderSmash is a voting application that allows users to vote on whether they w
 
 What does it mean to `pass` or `smash`? Find out on [Urban Dictionary](https://www.urbandictionary.com/define.php?term=Smash%20or%20pass).
 
+### Deploying with Vercel
+
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsurgieboi%2Ffoundersmash&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+
 ## Getting Started
 
 If you would like to clone or fork this respository, follow thses steps to run the application locally:
