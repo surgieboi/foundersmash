@@ -47,7 +47,7 @@ export default function Index({ initialRememberValue }) {
             initialRememberValue &&
             <Link href="/voting">
               <button className="mt-3 sm:mt-6 sm:mb-3 py-4 
-                            w-full 
+                            w-full sm:w-[300px]
                             rounded-full 
                             bg-pink-500 text-white 
                             hover:bg-pink-600 active:bg-pink-600 
@@ -63,7 +63,7 @@ export default function Index({ initialRememberValue }) {
             !initialRememberValue &&
             <Link href="/voting">
               <button className="mt-3 sm:mt-6 sm:mb-3 py-4 
-                            w-full
+                            w-full sm:w-[300px]
                             rounded-full 
                             bg-pink-500 text-white 
                             hover:bg-sky-500 active:bg-sky-500  
