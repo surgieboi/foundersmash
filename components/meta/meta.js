@@ -5,10 +5,10 @@ export default function Meta() {
         <>
             <Head>
                 <title>FounderSmash | Pass or Smash on Top Founders</title>
-                <meta name="description" content="Pass or Smash on Top Founders" />
+                <meta name="description" content="FounderSmash | Pass or Smash on Top Founders" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
                 <link rel="icon" href="/favicon.png" />
-                <meta property="og:title" content="FounderSmash | Pass or Smash on Top Founders" />
+                <meta property="og:title" content="FounderSmash" />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content="https://foundersmash.vercel.app/" />
                 <meta property="og:image" content="https://foundersmash.vercel.app/og.jpg" />
