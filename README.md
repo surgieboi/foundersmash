@@ -11,7 +11,7 @@ What does it mean to `pass` or `smash`? Find out on [Urban Dictionary](https://w
 If you would like to clone or fork this respository, follow thses steps to run the application locally:
 
 1. Setup [Supabase](https://supabase.com/), [view instructions](#setting-up-supabase)
-2. `git clone ...` 
+2. `git clone https://github.com/surgieboi/foundersmash` 
 3. `npm install`
 4. `npm run dev`
 5. View the application on `localhost:3000`
