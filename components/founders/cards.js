@@ -140,7 +140,7 @@ export default function VotingCards() {
 
     if (!data) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Whoops! There was an issue loading data from Supabase.</p>;
 
-    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 let's see how your passes and smashes rank up!<br></br><Link href="/rankings" passHref><button className="mt-3 sm:mt-6 sm:mb-3 py-4 w-full sm:w-[300px] rounded-full bg-pink-500 text-white text-base hover:bg-sky-500 active:bg-sky-500 focus:outline-none focus:ring focus:ring-slate-300 disabled:bg-slate-200 disabled:text-slate-500"  onClick={() => { clearStorage() }} >View Rankings</button></Link></p>;
+    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 let&#39;s see how your passes and smashes rank up!<br></br><Link href="/rankings" passHref><button className="mt-3 sm:mt-6 sm:mb-3 py-4 w-full sm:w-[300px] rounded-full bg-pink-500 text-white text-base hover:bg-sky-500 active:bg-sky-500 focus:outline-none focus:ring focus:ring-slate-300 disabled:bg-slate-200 disabled:text-slate-500"  onClick={() => { clearStorage() }} >View Rankings</button></Link></p>;
 
     return (
         <>
