@@ -31,6 +31,24 @@ export default function VotingCards() {
         }
     };
 
+    const fetchFounder = async () => {
+        try {
+            const { data, error } = await supabase
+                .from('founders')
+                .select()
+            shuffle(data);
+            setData(data);
+            setIndex(0);
+            setFid(data[index].founder_id);
+            setFlength(data.length);
+            console.log(`Welcome to FounderSmash, you are about to pass or smash on ${data.length} founders!`);
+            if (error) throw error;
+            console.log("Founder data has been loaded from Supabase.");
+        } catch (error) {
+            console.log("An error occurred while fetching founder data from Supabase.");
+        }
+    };
+
     useEffect(() => {
         setLoading(true);
         const founderSmashData = localStorage.getItem('lastfounderarray');
@@ -50,17 +68,7 @@ export default function VotingCards() {
             console.log("FounderSmash data has been reloaded!");
         } else {
             console.log("We gone hoe!")
-            fetch(`https://pmdodsvbdcmtkfjvsoli.supabase.co/rest/v1/founders`, options)
-                .then((res) => res.json())
-                .then((data) => {
-                    shuffle(data);
-                    setData(data);
-                    setIndex(0);
-                    setFid(data[index].founder_id);
-                    setFlength(data.length);
-                    console.log(`Welcome to FounderSmash, you are about to pass or smash on ${data.length} founders!`);
-
-                });
+            fetchFounder();
         };
         setTimeout(() => {
             setLoading(false);
@@ -132,7 +140,7 @@ export default function VotingCards() {
 
     if (!data) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Whoops! There was an issue loading data from Supabase.</p>;
 
-    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 see how your passes and smashes <Link href="/rankings" passHref><a onClick={() => { clearStorage(); }} className="underline">rank up</a></Link>!</p>;
+    if (clicks >= flength) return <p className="h-fit w-11/12 sm:w-5/6 max-w-[800px] mx-auto py-20 px-10 text-2xl text-center">Interesting choices 😜 let's see how your passes and smashes rank up!<br></br><Link href="/rankings" passHref><button className="mt-3 sm:mt-6 sm:mb-3 py-4 w-full sm:w-[300px] rounded-full bg-pink-500 text-white text-base hover:bg-sky-500 active:bg-sky-500 focus:outline-none focus:ring focus:ring-slate-300 disabled:bg-slate-200 disabled:text-slate-500"  onClick={() => { clearStorage() }} >View Rankings</button></Link></p>;
 
     return (
         <>
@@ -179,7 +187,7 @@ export default function VotingCards() {
                                 disabled:bg-slate-200 disabled:text-slate-500">
                         Pass
                     </button>
-                    <button onClick={() => { voteSmash(); updateClicks(); updateVotingStatus(); }}
+                    <button onClick={() => { updateClicks(); updateVotingStatus(); }}
                         className="m-1 py-4 px-10 
                                 w-1/2
                                 rounded-full 

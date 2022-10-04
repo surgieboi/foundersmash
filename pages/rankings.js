@@ -18,7 +18,7 @@ export default function Rankings({ initialRememberValue }) {
             setData(data)
             setLoading(false)
             if (error) throw error;
-            console.log(data)
+            //console.log(data)
             console.log("Ranking data has been loaded from Supabase.");
         } catch (error) {
             console.log("An error occurred while fetching ranking data from Supabase.");
