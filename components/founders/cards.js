@@ -148,7 +148,7 @@ export default function VotingCards() {
                                     <div className="h-[350px] sm:h-[375px] rounded-t-3xl"
                                         style={
                                             {
-                                                backgroundImage: `url(/${founder.image})`,
+                                                backgroundImage: `url(${founder.image})`,
                                                 backgroundSize: 'cover',
                                                 backgroundPosition: 'center center',
                                                 backgroundColor: `#f4f4f4`
