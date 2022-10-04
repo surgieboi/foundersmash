@@ -187,7 +187,7 @@ export default function VotingCards() {
                                 disabled:bg-slate-200 disabled:text-slate-500">
                         Pass
                     </button>
-                    <button onClick={() => { updateClicks(); updateVotingStatus(); }}
+                    <button onClick={() => { voteSmash(); updateClicks(); updateVotingStatus(); }}
                         className="m-1 py-4 px-10 
                                 w-1/2
                                 rounded-full 
