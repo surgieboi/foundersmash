@@ -83,7 +83,7 @@ export default function VotingCards() {
                     {
                         founder: fid,
                         vote: `pass`
-                    },
+                    }
                 ])
                 .single();
                 setIndex(index + 1);

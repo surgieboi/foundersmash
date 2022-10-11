@@ -87,6 +87,13 @@ Using your Supabase accounts `Database URL` and `ANON Key`, update the following
 2. Update each environment variable with their respective values
 3. Save
 
+### Enabling Row Level Security
+
+To prevent anonymous usage of your Supabase data, enable Row Level Security (ie. [RSL](https://supabase.com/docs/guides/auth/row-level-security#allow-read-access)) by adding the following Policies to their respective Tables:
+
+- Select: founders, using the following expression `(role() = 'anon'::text)`
+- Insert: voters and votes, using the following expression `(role() = 'anon'::text)`
+
 ## Deploying to Vercel
 
 By default, this application runs on [Vercel](https://vercel.com/) and can be deployed via your local machine using [Vercel's CLI](https://vercel.com/docs/cli).
