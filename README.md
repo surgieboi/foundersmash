@@ -91,8 +91,8 @@ Using your Supabase accounts `Database URL` and `ANON Key`, update the following
 
 To prevent anonymous usage of your Supabase data, enable Row Level Security (ie. [RSL](https://supabase.com/docs/guides/auth/row-level-security#allow-read-access)) by adding the following Policies to their respective Tables:
 
-- Select: founders, using the following expression `(role() = 'anon'::text)`
-- Insert: voters and votes, using the following expression `(role() = 'anon'::text)`
+- Select: founders, using the following expression `auth.role() = 'anon'`
+- Insert: voters and votes, using the following expression `auth.role() = 'anon'`
 
 ## Deploying to Vercel
 
